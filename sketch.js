@@ -36,26 +36,26 @@ function setup() {
 
 function draw() {
   background(backgroundImg);
-  Engine.update(engine);
+  // Engine.update(engine);
 
   ground.display();
   hero.display();
-  box1.display();
-  box2.display();
-  box3.display();
-  box4.display();
-  box5.display();
-  box6.display();
-  box7.display();
+  // box1.display();
+  // box2.display();
+  // box3.display();
+  // box4.display();
+  // box5.display();
+  // box6.display();
+  // box7.display();
 }
 
 function mouseDragged () {
   Matter.Body.setPosition(hero.body, {x: mouseX, y: mouseY});
 }
 
-// function mouseReleased() {
-//   fly.Fly();
-// }
+function mouseReleased() {
+  fly.release();
+}
 
 function keyPressed() {
   if(keyCode === 32) {

@@ -1,6 +1,7 @@
 class Fly {
     constructor(bodyA, pointB) {
-        var options = {bodyA: bodyA, pointB: pointB, stiffness: 20, length: 10};
+        var options = {bodyA: bodyA, pointB: pointB, stiffness: 10, length: 5};
+        this.bodyA = bodyA;
         this.pointB = pointB;
         this.fly = Constraint.create(options);
         World.add(world, this.fly);
@@ -14,7 +15,7 @@ class Fly {
         pop();
     }
 
-    Fly() {
+    release() {
         this.fly.bodyA = null;
     }
 
